@@ -1,6 +1,6 @@
 # bike-weather-api-capstone
 
-The insight•full app allows you to track your meditation sessions and add insights on how your session went. You can then view your practice over time and read your journal of insights gained during your sessions.
+The bike weather app allows you to view the current weather data in order to plan for your bike route. If the current weather is not favorable, a 3 day future forecast will be provided to the user to find the next optimum time to ride.
 
 ### Working Prototype
 
@@ -17,51 +17,16 @@ View React working prototype here: [insight•full](https://jes-a.github.io/medi
 
 **Landing Page** 
 
-As a user, I want to understand what the app is so that I can decide if I want to sign up
+As a user, I want to understand what the app is and to enter the city name of where to fetch the weather data
 
 ![Landing Page Design](/screenshots/wireframes/landing.png)
 
-**Sign Up Page** 
-
-As a user, I want to sign up so that I can save my information 
-
-![Sign Up Page Design](/screenshots/wireframes/sign-up.png)
-
-**Log In Page** 
-
-As a user, I want to log in so I can have access to my tracker
-
-![Log in Page Design](/screenshots/wireframes/log-in.png)
-
-**Dashboard Page** 
-
-As a user, I want to see my meditation stats so that I can have a better idea of how my practice is going
-
-![Dashboard Page Design](/screenshots/wireframes/dashboard.png)
-
-**Add Session Page** 
-
-As a user, I want to add my meditation day so that I can track my practice
-
-![Add Session Page Design](/screenshots/wireframes/add-session.png)
 
 **Insights Page** 
 
-As a user, I want to read my journal entries so that I can reflect on my practice
+As a user, I want to see the current weather weather data and the three day forecast
 
 ![Insights Page Design](/screenshots/wireframes/insights.png)
-
-**Settings Page** 
-
-As a user, I want to log out so that I can keep my info safe
-
-![Settings Page Design](/screenshots/wireframes/settings.png)
-
-**Change Password Page** 
-
-As a user, I want to change my password so that I can keep my info safe
-
-![Change Password Page Design](/screenshots/wireframes/change-pw.png)
 
 
 ## Designs
