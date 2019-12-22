@@ -5,7 +5,7 @@ The bike weather app allows you to view the current weather data in order to pla
 ### Working Prototype
 
 View Node working prototype here: [insight•full](https://meditation-tracker.herokuapp.com/) 
-View React working prototype here: [insight•full](https://jes-a.github.io/meditation-app-fullstack-capstone-react/build)  
+View React working prototype here: [insight•full](https://jes-a.github.io/meditation)  
 
 
 ## Site Map: MVP 
@@ -19,7 +19,7 @@ View React working prototype here: [insight•full](https://jes-a.github.io/medi
 
 As a user, I want to understand what the app is and to enter the city name of where to fetch the weather data
 
-![Landing Page Design](/screenshots/wireframes/landing.png)
+![Landing Page Design](/github-images/back-of-napking.png)
 
 
 **Insights Page** 
