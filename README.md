@@ -5,8 +5,7 @@ The bike weather app allows you to view the current weather data in order to pla
 
 ### Working Prototype
 
-View working prototype here: [bike weather api capstone](https://.com/) 
-
+View working prototype here: [bike weather api capstone](https://github.com/coryflad/bike-weather-api-capstone/.com/) 
 
 
 ## Site Map: MVP 
@@ -111,14 +110,9 @@ bike-weather-api-capstone was built with:
 * JavaScript 
 * jQuery 
 
-#### Back End 
-
-
-
 
 ### Responsive
 This app is built to be responsive to smaller screen sizes using a float-grid css and media screen width breakpoint of 700px for smaller screen sizes
-
 
 
 ## Development Road Map
