@@ -1,6 +1,6 @@
 # bike-weather-api-capstone
 
-The bike weather app allows you to view the current weather data in order to plan for your bike route on that day. A 3 day future forecast will be provided aid for future planning
+The bike weather app allows you to view the current weather data in order to plan for your bike route on that day. A 3 day future forecast will be provided to aid for future planning
 
 
 ### Working Prototype
