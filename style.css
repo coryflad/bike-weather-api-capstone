@@ -1,0 +1,151 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    /*reset Firefox user agent styles*/
+    -moz-margin-before: 0px;
+    -moz-margin-after: 0px;
+    -moz-margin-start: 0px;
+    -moz-margin-end: 0px;
+    -moz-padding-before: 0px;
+    -moz-padding-after: 0px;
+    -moz-padding-start: 0px;
+    -moz-padding-end: 0px;
+    /*reset Internet Explorer user agent styles*/
+    -ms-margin-before: 0px;
+    -ms-margin-after: 0px;
+    -ms-margin-start: 0px;
+    -ms-margin-end: 0px;
+    -ms-padding-before: 0px;
+    -ms-padding-after: 0px;
+    -ms-padding-start: 0px;
+    -ms-padding-end: 0px;
+    /*reset Opera user agent styles*/
+    -o-margin-before: 0px;
+    -o-margin-after: 0px;
+    -o-margin-start: 0px;
+    -o-margin-end: 0px;
+    -o-padding-before: 0px;
+    -o-padding-after: 0px;
+    -o-padding-start: 0px;
+    -o-padding-end: 0px;
+}
+
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules below)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
+*/  
+html {
+    background-image: url(website-images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+h1 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+div {
+  border: solid 1px black;
+  padding: 5px;
+  height: 100px;
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/  
+
+
+footer {
+  margin: 10px auto;
+  text-align: center;
+}
+  /* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/ 
+  section {
+    min-height: 200px;
+    width: 50%;
+    padding: 6% 0;
+    background-image: url(website-images/transparent.jpg);
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 20px 20px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*iPhone portrait*/
+
+@media only screen and (min-width: 320px) {
+    body {
+        color: purple;
+    }
+}
+  /*iPhone landscape*/
+
+@media only screen and (min-width: 480px) {
+    body {
+        color: green;
+    }
+}
+/*ipad potrait*/
+
+@media only screen and (min-width: 768px) {
+    body {
+        color: red;
+    }
+}
+/*ipad lanscape / small laptop*/
+
+@media only screen and (min-width: 1024px) {
+    body {
+        color: blue;
+    }
+}
