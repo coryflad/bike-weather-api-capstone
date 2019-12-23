@@ -5,7 +5,7 @@ The bike weather app allows you to view the current weather data in order to pla
 
 ### Working Prototype
 
-View working prototype here: [bike weather api capstone](https://github.com/coryflad/bike-weather-api-capstone/.com/) 
+View working prototype here: [bike weather api capstone](https://coryflad.github.io/bike-weather-api-capstone/)
 
 
 ## Site Map: MVP 
@@ -40,34 +40,6 @@ As a user, I want to see the current weather weather data and the three day fore
 
 ![Landing Page Mobile Design]()
 
-**Sign Up Page** 
-
-![Sign Up Page Design]()
-
-**Log In Page** 
-
-![Log in Page Design]()
-
-**Log In Page Mobile** 
-
-![Log in Page Mobile Design]()
-
-**Dashboard Page** 
-
-![Dashboard Page Design]()
-
-**Dashboard Page Mobile** 
-
-![Dashboard Page Mobile Design]()
-
-**Add Session Page** 
-
-![Add Session Page Design]()
-
-**Add Session Page Mobile** 
-
-![Add Session Page Mobile Design]()
-
 **Insights Page** 
 
 ![Insights Page Design]()
@@ -76,21 +48,6 @@ As a user, I want to see the current weather weather data and the three day fore
 
 ![Insights Page Mobile Design]()
 
-**Settings Page** 
-
-![Settings Page Design]()
-
-**Settings Page Mobile** 
-
-![Settings Page Mobile Design]()
-
-**Change Password Page** 
-
-![Change Password Page Design]()
-
-**Change Password Page Mobile** 
-
-![Change Password Page Mobile Design]()
 
 
 ## Screenshots: MVP
@@ -117,5 +74,7 @@ This app is built to be responsive to smaller screen sizes using a float-grid cs
 
 ## Development Road Map
 Features for future iterations include: 
-- Insert items here
+- add a feature for current weather
+- add a feature for 3-day forecast
+- implement route finder to find the best ride according in the wind/weather
 
