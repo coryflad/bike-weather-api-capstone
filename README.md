@@ -4,8 +4,8 @@ The bike weather app allows you to view the current weather data in order to pla
 
 ### Working Prototype
 
-View Node working prototype here: [insight•full](https://meditation-tracker.herokuapp.com/) 
-View React working prototype here: [insight•full](https://jes-a.github.io/meditation)  
+View Node working prototype here: [bike weather api capstone](https://.com/) 
+
 
 
 ## Site Map: MVP 
@@ -19,7 +19,7 @@ View React working prototype here: [insight•full](https://jes-a.github.io/medi
 
 As a user, I want to understand what the app is and to enter the city name of where to fetch the weather data
 
-![Landing Page Design](/github-images/back-of-napking.png)
+![Landing Page Design](/github-images/back-of-napkin.png)
 
 
 **Insights Page** 
@@ -118,12 +118,7 @@ Meditation Tracker was built with:
 
 #### Back End 
 
-* Node.js 
-* Express.js
-* MongoDB
-* Mongoose
-* mLab database
-* Mocha and Chai for testing
+
 
 
 ### Responsive
@@ -133,21 +128,5 @@ This app is built to be responsive to smaller screen sizes using a float-grid cs
 
 ## Development Road Map
 Features for future iterations include: 
-- Add ability to view one insight entry on a separate page
-- Add filter to Insights page to filter by time, app, date
-- Add links to meditation resources
-- Add an app timer to meditate with
+- Insert items here
 
-
-#  The typical command lines for capstone projects
-
-## Node command lines
-* npm install ==> install all node modules
-* nodemon server.js ==> run node server
-* npm test ==> run the tests
-
-## React command lines
-* npm install ==> install all node modules
-* npm run build ==> build the react files in the "build" folder
-* npm start ==> run react server on http://127.0.0.1:8080
-* npm test ==> run the tests
