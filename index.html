@@ -9,33 +9,25 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Weather Forecast Planner for Cyclists</h1>
-        </header>
-
-        <section>
-            Landing Page
-            <p>Are you going to need your Flandrian Best for some Flemish type weather? Enter your city to find the forecast
-                for your next ride!</p>
-            <form>
-                <input type="text" placeholder="Enter a City">
-                <input type="submit">
+    <main role=main>
+        <section class="start-display" id="start-page">
+            <header class="row" role="banner">
+                <h1>Bike weather</h1>
+            </header>
+            <p>Are you going to need your "Flandrian Best" for some Flemish type weather? Enter your city to find the
+                forecast for your next ride!</p>
+            <form action="#" class="search-form row" id="search-query-form">
+                <input type="text" placeholder="Enter a city" class="search-query" id="search-term" required>
+                <button type="submit" class="submit-button">Submit</button>
             </form>
         </section>
 
-        <section>
-            Insight Page
-            <div id="current-forecast">
-                <p>container for forecast for the next three hours</p>
-            </div>
-            <div id="three-day-forecast">
-                <p>container for three-day forecast </p>
-            </div>
+        <section class="weather row" id="weather-display">
+
         </section>
     </main>
 
-    <footer aria-label="contact-info">
+    <footer>
         <p>&copy; 2019 Cory Fladhammer</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js"

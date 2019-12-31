@@ -50,7 +50,8 @@ General styles (General Module, wrapping around the modules below)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
 */  
 html {
-    background-image: url(website-images/background.jpg);
+    /*background-image: url(website-images/background.jpg);*/
+    background-color: lightsteelblue;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,6 +61,7 @@ html {
 h1 {
   margin: 10px auto;
   text-align: center;
+  font-size: 40px;
 }
 
 div {
@@ -72,7 +74,6 @@ div {
 }
 
 p {
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -93,14 +94,38 @@ Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */ 
   section {
-    min-height: 200px;
-    width: 50%;
+    min-height: 100px;
+    width: 90%;
     padding: 6% 0;
     background-image: url(website-images/transparent.jpg);
     margin: 10px auto;
     border-radius: 5px;
     padding: 20px 20px;
   }
+
+  section.weather-results {
+    border: 1px solid black;
+  }
+
+  button {
+    padding: 1em;
+    border: 0;
+    font-size: 0.8em;
+    color: white;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to bottom, #57b, #148);
+    box-shadow: 0.1em 0.1em 0.5em #124;
+  }
+
+  input {
+    padding: 1em;
+    border: 0;
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    font-size: 12px;
+  }
+
+  
   
 
 
