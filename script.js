@@ -30,9 +30,9 @@ function getWeatherData(city) {
 function getYouTubeData(userSearchTerm) {
     $.getJSON("https://www.googleapis.com/youtube/v3/search", {
         part: "snippet", //Youtube API special parameter (please check documentation here https://developers.google.com/youtube/v3/docs/search/list)
-        maxResults: 20, //number of results per page
-        key: "AIzaSyCclIq-RF7zhCJ_JnoXJBLdGvz-v2nzCB0",
-        q: userSearchTerm, //shearch query from the user
+        maxResults: 5, //number of results per page
+        key: "AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw",
+        q: userSearchTerm, //search query from the user
         type: "video" //only return videos (no channels or playlists) so we can take the video ID and link it back to Youtube
     },
         function (receivedApiData) {
@@ -88,7 +88,14 @@ function enterLocation() {
     });
 }
 
-
+//autocomplete location name in form
+function activatePlacesSearch() {
+    let options = {
+        types: ['(regions)']
+    };
+    let input = document.getElementById('search-term');
+    let autocomplete = new google.maps.places.Autocomplete(input, options);
+}
 
 
 $(enterLocation);
