@@ -1,11 +1,9 @@
 'use strict';
 
-/*const apiKey = 'be67025be3ad63215702c8c628cc2f8c';
-const searchURL = 'https://api.openweathermap.org/data/2.5/';
-*/
-
 const searchURL = "https://api.openweathermap.org/data/2.5/weather?id=524901&APPID=be67025be3ad63215702c8c628cc2f8c"
 
+// function used to convert wind direction data from degrees 
+//to cardinal / intercardinal directions
 function degToCompass(num) {
     var val = Math.floor((num / 22.5) + 0.5);
     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
@@ -27,6 +25,8 @@ function getWeatherData(city) {
         }
     });
 }
+
+//retrieve data from YouTube API
 function getYouTubeData(userSearchTerm) {
     $.getJSON("https://www.googleapis.com/youtube/v3/search", {
         part: "snippet", //Youtube API special parameter (please check documentation here https://developers.google.com/youtube/v3/docs/search/list)
@@ -49,10 +49,11 @@ function getYouTubeData(userSearchTerm) {
         });
 }
 
+// displays the results from OpenWeather API
 function displayWeather(data) {
     return `
     <div class="weather-results">
-        <h2>Current Weather for ${data.name}</h2>
+        <p>${data.name}</p>
         <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
         <p>${data.weather[0].main}</p>
         <p>Temperature:${data.main.temp}&#8457</p>
@@ -60,6 +61,8 @@ function displayWeather(data) {
         <p>Wind Direction:${degToCompass(data.wind.deg)}</p>
     </div>`;
 }
+
+// displays the results from YouTube API
 function displayYouTube(videosArray) {
     //create an empty variable to store one LI for each one the results
     var buildTheHtmlOutput = "";
@@ -89,7 +92,7 @@ function enterLocation() {
     });
 }
 
-//autocomplete location name in form
+//autocomplete location name in user input field
 function activatePlacesSearch() {
     let options = {
         types: ['(regions)']

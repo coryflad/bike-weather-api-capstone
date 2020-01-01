@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>bike weather api capstone</title>
+    <title>bike weather API capstone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <main role=main>
+        <header class="row" role="banner">
+            <h1>Bike weather API capstone</h1>
+        </header>
+
         <section class="start-display" id="start-page">
-            <header class="row" role="banner">
-                <h1>Bike weather</h1>
-            </header>
-            <p>Are you going to need your "Flandrian Best" for some Flemish type weather? Enter your city to find the
+            <p>For your next bike ride, are you going to need your "Flandrian Best" for some Flemish type weather? Enter your city to find the
                 forecast for your next ride!</p>
             <form action="#" class="search-form row" id="search-query-form">
                 <input type="text" placeholder="Enter a city" class="search-query" id="search-term" required>
@@ -23,17 +24,20 @@
         </section>
 
         <section class="weather-row" id="weather-display">
+            <h2>Weather for the user search city</h2>
         </section>
-        <section class="weather-row" id="search-results">
-            <ul>
 
+        <section class="weather-row" id="search-results">
+            <h2>Videos about the user search city</h2>
+            <ul>
             </ul>
         </section>
 
-
     </main>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw&libraries=places&callback=activatePlacesSearch"></script>

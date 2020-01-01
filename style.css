@@ -48,7 +48,8 @@
 /* -------------------------------------
 General styles (General Module, wrapping around the modules below)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
-*/  
+*/
+
 html {
     /* background-image: url(website-images/background.jpg); */
     background-color: cornflowerblue;
@@ -64,12 +65,14 @@ h1 {
   font-size: 40px;
 }
 
-
+h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
 
 p {
   margin-bottom: 10px;
 }
-
 
 
 /* -------------------------------------
@@ -77,15 +80,17 @@ Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */  
 
-
 footer {
   margin: 10px auto;
   text-align: center;
 }
+
+
   /* -------------------------------------
 Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
-*/ 
+*/
+
   section {
     min-height: 100px;
     width: 90%;
@@ -123,13 +128,7 @@ Content styles (Main Module)
   }
 
 
-  img.video {
-    display: inline-block;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-    padding-top: ;
-  }
+
   
   
 
