@@ -30,7 +30,7 @@ function getWeatherData(city) {
 function getYouTubeData(userSearchTerm) {
     $.getJSON("https://www.googleapis.com/youtube/v3/search", {
         part: "snippet", //Youtube API special parameter (please check documentation here https://developers.google.com/youtube/v3/docs/search/list)
-        maxResults: 5, //number of results per page
+        maxResults: 3, //number of results per page
         key: "AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw",
         q: userSearchTerm, //search query from the user
         type: "video" //only return videos (no channels or playlists) so we can take the video ID and link it back to Youtube
@@ -51,14 +51,14 @@ function getYouTubeData(userSearchTerm) {
 
 function displayWeather(data) {
     return `
-    <section class="weather-results">
+    <div class="weather-results">
         <h2>Current Weather for ${data.name}</h2>
         <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
         <p>${data.weather[0].main}</p>
         <p>Temperature:${data.main.temp}&#8457</p>
         <p>Wind Speed:${data.wind.speed} MPH</p>
         <p>Wind Direction:${degToCompass(data.wind.deg)}</p>
-    </section>`;
+    </div>`;
 }
 function displayYouTube(videosArray) {
     //create an empty variable to store one LI for each one the results
@@ -83,6 +83,7 @@ function enterLocation() {
         event.preventDefault();
         let city = $('.search-query').val();
         $('#weather-display').html("");
+        $('.start-display').hide();
         getWeatherData(city);
         getYouTubeData(city);
     });
