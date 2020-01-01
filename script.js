@@ -66,11 +66,11 @@ function displayYouTube(videosArray) {
 
     $.each(videosArray, function (videosArrayKey, videosArrayValue) {
         //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
-        buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += "<p>" + videosArrayValue.snippet.title + "</p>"; //output vide title
+        buildTheHtmlOutput += "<li class='search-results'>";
         buildTheHtmlOutput += "<a href='https://www.youtube.com/watch?v=" + videosArrayValue.id.videoId + "' target='_blank'>"; //taget blank is going to open the video in a new window
-        buildTheHtmlOutput += "<img src='" + videosArrayValue.snippet.thumbnails.high.url + "'/>"; //display video's thumbnail
+        buildTheHtmlOutput += "<img class='video' src='" + videosArrayValue.snippet.thumbnails.high.url + "'/>"; //display video's thumbnail
         buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "<p>" + videosArrayValue.snippet.title + "</p>"; //output vide title
         buildTheHtmlOutput += "</li>";
     });
 
