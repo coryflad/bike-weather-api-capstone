@@ -83,7 +83,7 @@ function enterLocation() {
         event.preventDefault();
         let city = $('.search-query').val();
         $('#weather-display').html("");
-        $('.start-display').hide();
+        $('.weather-row').show();
         getWeatherData(city);
         getYouTubeData(city);
     });

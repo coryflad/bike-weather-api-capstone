@@ -96,9 +96,9 @@ Content styles (Main Module)
     padding: 20px 20px;
   }
 
-  section.weather-results {
-    border: 1px solid black;
-  }
+ section.weather-row {
+   display: none;
+ }
 
   button {
     padding: 1em;
