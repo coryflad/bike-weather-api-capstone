@@ -17,7 +17,8 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
-function displayResults(responseJson) {
+
+function displayWeatherResults(responseJson) {
     console.log(responseJson);
     $('#weather-results').append(
         `<li>
@@ -27,9 +28,6 @@ function displayResults(responseJson) {
         <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
         </li>`
     )
-
-    //display the results section  
-    $('#results').removeClass('hidden');
 };
 
 function getWeather(query) {
@@ -49,11 +47,13 @@ function getWeather(query) {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => displayResults(responseJson))
+        .then(responseJson => displayWeatherResults(responseJson))
         .catch(err => {
             $('#js-error-message').text(`${query} ${err.message}! Please re-enter city / town name`);
         });
 }
+
+
 //get user input
 function enterLocation() {
     $('form').submit(event => {
