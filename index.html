@@ -9,38 +9,36 @@
 </head>
 
 <body>
-    <main role=main>
-        <header class="row" role="banner">
-            <h1>Bike weather API capstone</h1>
-        </header>
+    <div class="container">
+        <h1>bike weather api capstone</h1>
+        
+        <form>
+            <p>Enter your city name to find the current weather!</p>
+            <input type="text" name="search-term" placeholder="Chicago" id="js-search-term" required>
+            <button type="submit" value="Search">Search</button> 
+        </form>
 
-        <section class="start-display" id="start-page">
-            <p>For your next bike ride, are you going to need your "Flandrian Best" for some Flemish type weather? Enter your city to find the
-                forecast for your next ride!</p>
-            <form action="#" class="search-form row" id="search-query-form">
-                <input type="text" placeholder="Enter a city" class="search-query" id="search-term" required>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </section>
+        <p id="js-error-message" class="error-message"></p>
 
-        <section class="weather-row" id="weather-display">
-            <h2>Weather for the user search city</h2>
-        </section>
-
-        <section class="weather-row" id="search-results">
-            <h2>Videos about the user search city</h2>
-            <ul>
+        <section id="weather-results" class="hidden">
+            <h2>weather results</h2>
+            <ul id="results-list">
             </ul>
+
         </section>
 
-    </main>
+        <section id="weather-results" class="hidden">
+            <h2>YouTube results</h2>
+            <ul id="results-list">
+            </ul>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-        </script>
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw&libraries=places&callback=activatePlacesSearch"></script>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="test-script.js"></script>
+
 </body>
 
 </html>

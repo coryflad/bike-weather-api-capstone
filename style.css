@@ -80,10 +80,7 @@ Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */  
 
-footer {
-  margin: 10px auto;
-  text-align: center;
-}
+
 
 
   /* -------------------------------------
@@ -91,7 +88,7 @@ Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
 
-  section {
+  section, form {
     min-height: 100px;
     width: 90%;
     padding: 6% 0;
@@ -100,10 +97,6 @@ Content styles (Main Module)
     border-radius: 5px;
     padding: 20px 20px;
   }
-
- section.weather-row {
-   display: none;
- }
 
   button {
     padding: 1em;
@@ -123,7 +116,7 @@ Content styles (Main Module)
     font-size: 12px;
   }
 
-  li.search-results {
+  li {
     list-style-type: none;
   }
 
