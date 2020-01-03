@@ -19,7 +19,7 @@ function formatQueryParams(params) {
 
 function displayResults(responseJson) {
     console.log(responseJson);
-    $('#results-list').append(
+    $('#weather-results').append(
         `<li>
         <ul>Current Weather for ${responseJson.name}</ul>
         <ul>Temperature:${responseJson.main.temp}&#8457</ul>
@@ -51,7 +51,7 @@ function getWeather(query) {
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`${query} ${err.message}, please re-enter city / town name`);
+            $('#js-error-message').text(`${query} ${err.message}! Please re-enter city / town name`);
         });
 }
 //get user input
