@@ -32,14 +32,12 @@ function displayWeatherResults(responseJson) {
         <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
         </li>`
     )
+    
 };
 
 //creates li and displays in html
 function displayYoutubeResults(responseJson) {
     console.log(responseJson);
-
-    // if there are previous results, remove them
-
 
     // iterate through the items array
     for (let i = 0; i < responseJson.items.length; i++) {
@@ -80,7 +78,7 @@ function getWeather(query) {
             getYouTubeVideos(query);
         })
         .catch(err => {
-            $('#weather-results').empty();
+            $('#weather-results').html();
             $('#js-error-message').text(`${query} ${err.message}! Please re-enter city / town name`);
         });
 }
@@ -91,7 +89,7 @@ function getYouTubeVideos(query) {
         key: apiYoutubeKey,
         q: query,
         part: 'snippet',
-        maxResults: 2
+        maxResults: 1
     };
     const queryString = formatQueryParams(params)
     const url = searchYoutubeURL + '?' + queryString;
@@ -125,10 +123,13 @@ function enterLocation() {
             $('#js-error-message').html('');
             $('#youtube-results').html('');
             getWeather(searchTerm);
+            $('#weather-results').removeClass("hidden");
         }
 
     });
 }
+
+
 
 
 $(enterLocation);

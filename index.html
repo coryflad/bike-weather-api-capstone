@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <h1>bike weather api capstone</h1>
-        
-        <form>
+
+        <form action="#">
             <p>Enter your city name to find the current weather!</p>
-            <input type="text" name="search-term" placeholder="Chicago" id="js-search-term" required>
-            <button type="submit" value="Search">Search</button> 
+            <input type="text" name="search-term" placeholder="Enter a city" id="js-search-term" required>
+            <button type="submit" value="Search">Search</button>
         </form>
 
-        <section id="js-error-message" class="error-message">
+        <section id="js-error-message" class="hidden">
         </section>
 
         <section id="weather-results-list" class="hidden">
@@ -34,6 +34,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    
     <script src="test-script.js"></script>
 
 </body>
