@@ -1,10 +1,10 @@
 'use strict';
 
-const apiKey = 'be67025be3ad63215702c8c628cc2f8c';
-const searchURL = 'https://api.openweathermap.org/data/2.5/weather';
+const apiWeatherKey = 'be67025be3ad63215702c8c628cc2f8c';
+const searchWeatherURL = 'https://api.openweathermap.org/data/2.5/weather';
 
-// const apiKey = 'AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw';
-// const searchURL = 'https://www.googleapis.com/youtube/v3/search';
+const apiYoutubeKey = 'AIzaSyAAgGwFpTIwbsW533bh_VcsHCeRgtexxKw';
+const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
 // function used to convert wind direction data from degrees 
 //to cardinal / intercardinal directions
@@ -20,13 +20,9 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
-
+//creates li and displays in html
 function displayWeatherResults(responseJson) {
     console.log(responseJson);
-    
-    // if there are previous results, remove them
-    $('#weather-results').empty();
-    $('#js-error-message').empty();
 
     $('#weather-results').append(
         `<li>
@@ -38,11 +34,12 @@ function displayWeatherResults(responseJson) {
     )
 };
 
-/*function displayResults(responseJson) {
+//creates li and displays in html
+function displayYoutubeResults(responseJson) {
     console.log(responseJson);
 
     // if there are previous results, remove them
-    $('#youtube-results').empty();
+
 
     // iterate through the items array
     for (let i = 0; i < responseJson.items.length; i++) {
@@ -58,16 +55,17 @@ function displayWeatherResults(responseJson) {
         </li>`
         )
     };
-}*/
+}
 
+//sends call to openweather API
 function getWeather(query) {
     const params = {
         q: query,
-        APPID: apiKey,
+        APPID: apiWeatherKey,
         units: 'imperial',
     };
     const queryString = formatQueryParams(params)
-    const url = searchURL + '?' + queryString;
+    const url = searchWeatherURL + '?' + queryString;
 
     console.log(url);
     fetch(url)
@@ -77,23 +75,26 @@ function getWeather(query) {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => displayWeatherResults(responseJson))
+        .then(responseJson => {
+            displayWeatherResults(responseJson);
+            getYouTubeVideos(query);
+        })
         .catch(err => {
             $('#weather-results').empty();
             $('#js-error-message').text(`${query} ${err.message}! Please re-enter city / town name`);
         });
 }
 
-// display the results section  
-/*function getYouTubeVideos(query, maxResults = 2) {
+//sends call to youtube API
+function getYouTubeVideos(query) {
     const params = {
-        key: apiKey,
+        key: apiYoutubeKey,
         q: query,
         part: 'snippet',
-        maxResults
+        maxResults: 2
     };
     const queryString = formatQueryParams(params)
-    const url = searchURL + '?' + queryString;
+    const url = searchYoutubeURL + '?' + queryString;
 
     fetch(url)
         .then(response => {
@@ -102,21 +103,30 @@ function getWeather(query) {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => displayResults(responseJson))
+        .then(responseJson => displayYoutubeResults(responseJson))
         .catch(err => {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
         });
-}*/
+}
 
 
 //get user input
 function enterLocation() {
+    
     $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
-        // const maxResults = $('#js-max-results').val();
-        // getYouTubeVideos(searchTerm, maxResults);
-        getWeather(searchTerm);
+        if (searchTerm == '') {
+            alert('please input city name');
+        }
+        else {
+            // if there are previous results, remove them
+            $('#weather-results').html('');
+            $('#js-error-message').html('');
+            $('#youtube-results').html('');
+            getWeather(searchTerm);
+        }
+
     });
 }
 
