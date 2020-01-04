@@ -120,9 +120,9 @@ Content styles (Main Module)
     list-style-type: none;
   }
 
-  /* .hidden { 
+  .hidden { 
     display: none;
-  }*/
+  }
 
 
 

@@ -20,41 +20,6 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
-//creates li and displays in html
-function displayWeatherResults(responseJson) {
-    console.log(responseJson);
-
-    $('#weather-results').append(
-        `<li>
-        <ul>Current Weather for ${responseJson.name}</ul>
-        <ul>Temperature:${responseJson.main.temp}&#8457</ul>
-        <ul>Wind Speed:${responseJson.wind.speed}MPH</ul>
-        <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
-        </li>`
-    )
-    
-};
-
-//creates li and displays in html
-function displayYoutubeResults(responseJson) {
-    console.log(responseJson);
-
-    // iterate through the items array
-    for (let i = 0; i < responseJson.items.length; i++) {
-
-        // for each video object in the items 
-        // array, add a list item to the results 
-        // list with the video title, description,
-        // and thumbnail
-        $('#youtube-results').append(
-            `<li><h3>${responseJson.items[i].snippet.title}</h3>
-        <p>${responseJson.items[i].snippet.description}</p>
-        <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
-        </li>`
-        )
-    };
-}
-
 //sends call to openweather API
 function getWeather(query) {
     const params = {
@@ -80,7 +45,87 @@ function getWeather(query) {
         .catch(err => {
             $('#weather-results').html();
             $('#js-error-message').text(`${query} ${err.message}! Please re-enter city / town name`);
+            $('#weather-results-list').addClass('hidden');
+            $('#youtube-results-list').addClass('hidden');
+            $('#js-error-message').removeClass('hidden');
         });
+}
+
+//sends call to youtube API
+function getYouTubeVideos(query) {
+    const params = {
+        key: apiYoutubeKey,
+        q: query,
+        part: 'snippet',
+        maxResults: 1
+    };
+    const queryString = formatQueryParams(params)
+    const url = searchYoutubeURL + '?' + queryString;
+
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
+        })
+        .then(responseJson => displayYoutubeResults(responseJson))
+        .catch(err => {
+            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+        });
+}
+
+function displayWeatherResults(responseJson) {
+    console.log(responseJson);
+
+    // if there are previous results, remove them
+    $('#weather-results').html('');
+    console.log('weather results emptied');
+
+    // adds the weather results
+    $('#weather-results').append(
+        `<li>
+        <ul>${responseJson.name}</ul>
+        <img src="https://openweathermap.org/img/w/${responseJson.weather[0].icon}.png">
+        <ul>${responseJson.weather[0].main}</ul>
+        <ul>Temperature:${responseJson.main.temp}&#8457</ul>
+        <ul>Wind Speed:${responseJson.wind.speed}MPH</ul>
+        <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
+        </li>`
+    )
+
+    // display the results section
+    $('#weather-results-list').removeClass('hidden');
+    $('#js-error-message').addClass('hidden');
+    console.log('weather results displayed');
+
+};
+
+function displayYoutubeResults(responseJson) {
+    console.log(responseJson);
+
+    // if there are previous results, remove them
+    $('#youtube-results').html('');
+    console.log('youtube results emptied');
+
+    // iterate through the items array
+    for (let i = 0; i < responseJson.items.length; i++) {
+
+        // for each video object in the items 
+        // array, add a list item to the results 
+        // list with the video title, description,
+        // and thumbnail
+        $('#youtube-results').append(
+            `<li><h3>${responseJson.items[i].snippet.title}</h3>
+        <p>${responseJson.items[i].snippet.description}</p>
+        <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+        </li>`
+        )
+        // display the results section
+        $('#youtube-results-list').removeClass('hidden');
+        $('#js-error-message').addClass('hidden');
+        console.log('youtube results displayed');
+    };
 }
 
 //sends call to youtube API
@@ -110,7 +155,6 @@ function getYouTubeVideos(query) {
 
 //get user input
 function enterLocation() {
-    
     $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
@@ -118,14 +162,8 @@ function enterLocation() {
             alert('please input city name');
         }
         else {
-            // if there are previous results, remove them
-            $('#weather-results').html('');
-            $('#js-error-message').html('');
-            $('#youtube-results').html('');
             getWeather(searchTerm);
-            $('#weather-results').removeClass("hidden");
         }
-
     });
 }
 
