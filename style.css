@@ -95,7 +95,7 @@ Content styles (Main Module)
 
   section {
     min-height: 100px;
-    width: 90%;
+    max-width: 80%;
     padding: 6% 0;
     /* background-image: url(website-images/transparent.jpg); */
     background-color: white;
@@ -106,7 +106,7 @@ Content styles (Main Module)
 
   form {
     min-height: 100px;
-    width: 90%;
+    width: 80%;
     padding: 6% 0;
     color: white;
     background-image: url(website-images/transparent.jpg);
@@ -135,6 +135,10 @@ Content styles (Main Module)
 
   li {
     list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 6px;
   }
 
   .hidden { 

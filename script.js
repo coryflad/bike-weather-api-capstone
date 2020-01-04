@@ -134,7 +134,7 @@ function getYouTubeVideos(query) {
         key: apiYoutubeKey,
         q: query,
         part: 'snippet',
-        maxResults: 1
+        maxResults: 3
     };
     const queryString = formatQueryParams(params)
     const url = searchYoutubeURL + '?' + queryString;
