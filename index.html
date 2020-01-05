@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <header class="container">
         <h1>bike weather api capstone</h1>
 
         <form>
@@ -17,27 +17,28 @@
             <input type="text" name="search-term" placeholder="Enter a city" id="js-search-term" required>
             <button type="submit" value="Search">Search</button>
         </form>
+    </header>
+    
+    <section id="js-error-message" class="hidden">
+        <h2>Error container</h2>
+    </section>
 
-        <section id="js-error-message" class="hidden">
-            <h2>Error container</h2>
-        </section>
+    <section id="weather-results-list" class="hidden">
+        <h2>Current Weather</h2>
+        <ul id="weather-results">
+        </ul>
+    </section>
 
-        <section id="weather-results-list" class="hidden">
-            <h2>Current Weather</h2>
-            <ul id="weather-results">
-            </ul>
-        </section>
+    <section id="youtube-results-list" class="hidden">
+        <h2>Videos about the destination</h2>
+        <ul class="videos" id="youtube-results">
+        </ul>
+    </section>
 
-        <section id="youtube-results-list" class="hidden">
-            <h2>Videos about the destination</h2>
-            <ul id="youtube-results">
-            </ul>
-        </section>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    
+
     <script src="script.js"></script>
 
 </body>
