@@ -116,8 +116,7 @@ function displayYoutubeResults(responseJson) {
         // list with the video title, description,
         // and thumbnail
         $('#youtube-results').append(
-            `<li><h3>${responseJson.items[i].snippet.title}</h3>
-        <p>${responseJson.items[i].snippet.description}</p>
+            `<li class="results"><h3>${responseJson.items[i].snippet.title}</h3>
         <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
         </li>`
         )

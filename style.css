@@ -139,15 +139,11 @@ Content styles (Main Module)
     border: 1px solid black;
     border-radius: 5px;
     padding: 6px;
-    margin: 4px 4px 4px 4px;
+    margin-bottom: 6px;
   }
 
   .hidden { 
-    display: block;
-  }
-
-  ul {
-    display: inline-block;
+    display: none;
   }
 
 
@@ -215,6 +211,6 @@ Content styles (Main Module)
         color: blue;
     }
     section, form {
-      max-width: 60%;
+      max-width: 40%;
     }
 }

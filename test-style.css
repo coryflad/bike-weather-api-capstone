@@ -1,0 +1,48 @@
+#weather-results {
+    list-style-type: none;
+}
+.hidden {
+    display: none;
+}
+
+.videos {
+    display: flex;
+    list-style-type: none;
+}
+
+.results {
+    border: 1px solid black;
+    margin: 4px 4px 4px 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+/*iPhone portrait*/
+
+@media only screen and (min-width: 320px) {
+    body {
+        color: black;
+    }
+}
+  /*iPhone landscape*/
+
+@media only screen and (min-width: 480px) {
+    body {
+        color: green;
+    }
+}
+/*ipad potrait*/
+
+@media only screen and (min-width: 768px) {
+    body {
+        color: red;
+    }
+}
+/*ipad lanscape / small laptop*/
+
+@media only screen and (min-width: 1024px) {
+    body {
+        color: blue;
+    }
+}
