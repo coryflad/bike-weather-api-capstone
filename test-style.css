@@ -1,5 +1,60 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    /*reset Firefox user agent styles*/
+    -moz-margin-before: 0px;
+    -moz-margin-after: 0px;
+    -moz-margin-start: 0px;
+    -moz-margin-end: 0px;
+    -moz-padding-before: 0px;
+    -moz-padding-after: 0px;
+    -moz-padding-start: 0px;
+    -moz-padding-end: 0px;
+    /*reset Internet Explorer user agent styles*/
+    -ms-margin-before: 0px;
+    -ms-margin-after: 0px;
+    -ms-margin-start: 0px;
+    -ms-margin-end: 0px;
+    -ms-padding-before: 0px;
+    -ms-padding-after: 0px;
+    -ms-padding-start: 0px;
+    -ms-padding-end: 0px;
+    /*reset Opera user agent styles*/
+    -o-margin-before: 0px;
+    -o-margin-after: 0px;
+    -o-margin-start: 0px;
+    -o-margin-end: 0px;
+    -o-padding-before: 0px;
+    -o-padding-after: 0px;
+    -o-padding-start: 0px;
+    -o-padding-end: 0px;
+}
+
+.container {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
 #weather-results {
     list-style-type: none;
+    text-align: center;
 }
 .hidden {
     display: none;
@@ -8,14 +63,33 @@
 .videos {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .results {
     border: 1px solid black;
-    margin: 4px 4px 4px 4px;
-    padding-left: 4px;
-    padding-right: 4px;
+    min-width: 60%;
+    max-width: 60%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*iPhone portrait*/
@@ -31,6 +105,12 @@
     body {
         color: green;
     }
+    .results {
+        border: 1px solid black;
+        min-width: 40%;
+        max-width: 40%;
+        height: 240px;
+    }
 }
 /*ipad potrait*/
 
@@ -45,4 +125,12 @@
     body {
         color: blue;
     }
+    .results {
+        border: 1px solid black;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-width: 20%;
+        max-width: 20%;
+        height: 240px;
+    } 
 }
