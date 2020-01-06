@@ -6,31 +6,33 @@
     <title>bike weather API capstone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="test-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="container">
-        <h1>bike weather api capstone</h1>
+        <h1>Is this a stupid font?</h1>
 
         <form>
             <p>Enter your city name to find the current weather!</p>
             <input type="text" name="search-term" placeholder="Enter a city" id="js-search-term" required>
             <button type="submit" value="Search">Search</button>
         </form>
+
     </header>
-    
-    <section class="hidden" id="js-error-message" >
+
+    <section id="js-error-message" class="hidden">
         <h2>Error container</h2>
     </section>
 
-    <section class="hidden" id="weather-results-list" >
-        <h2>Current Conditions</h2>
+    <section class="hidden" id="weather-results-list">
+        <!-- <h2>Current Conditions</h2> -->
         <ul id="weather-results">
         </ul>
     </section>
 
-    <section class="hidden" id="youtube-results-list" >
-        <h2>Videos about the destination</h2>
+    <section class="hidden" id="youtube-results-list">
+        <!-- <h2>Videos about the destination</h2> -->
         <ul class="videos" id="youtube-results">
         </ul>
     </section>
