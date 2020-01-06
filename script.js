@@ -89,6 +89,7 @@ function displayWeatherResults(responseJson) {
         <img src="https://openweathermap.org/img/w/${responseJson.weather[0].icon}.png">
         <ul>${responseJson.weather[0].main}</ul>
         <ul>Temperature:${responseJson.main.temp}&#8457</ul>
+        <ul>Feels Like:${responseJson.main.feels_like}&#8457</ul>
         <ul>Wind Speed:${responseJson.wind.speed}MPH</ul>
         <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
         </li>`

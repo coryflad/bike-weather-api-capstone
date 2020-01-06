@@ -45,11 +45,7 @@
 }
 
 html {
-    background-image: url(website-images/background_1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-image: url(website-images/transparent.jpg);
   }
 
 button {
@@ -64,15 +60,15 @@ button {
 
   
   .container {
-    min-height: 100px;
+    min-height: 500px;
     text-align: center;
-    width: 50%;
-    padding: 6% 0;
+    width: 100%;
     color: white;
-    background-image: url(website-images/transparent.jpg);
-    margin: 10px auto;
-    border-radius: 5px;
-    padding: 20px 20px;
+    background-image: url(website-images/background_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
   }
 
   section {
@@ -111,8 +107,6 @@ h3 {
 
 
 #weather-results-list {
-    /* background-image: url(website-images/transparent.jpg); */
-    margin-right: 25%;
     margin: 10px auto;
     border-radius: 5px;
     padding: 20px 20px;    
@@ -142,21 +136,22 @@ h3 {
 }
 
 .results {
-    border: 1px solid black;
+    border: 1px solid #FD7260;
+    box-shadow: 5px 10px  rgb(88,112,171);
     min-width: 60%;
     max-width: 60%;
-    max-height: 230px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-top: 6px;
+    max-height: 240px;
+    padding: 20px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 
 li {
+    border: 1px solid rgb(88,112,171);
+    box-shadow: 5px 10px  rgb(88,112,171);
     list-style-type: none;
-    background-image: url(website-images/transparent.jpg);
+    background-color: #CACACA;
 }
 
 
@@ -181,34 +176,32 @@ li {
 
 @media only screen and (min-width: 480px) {
     body {
-        color: white;
+        color: black;
     }
     .results {
-        border: 1px solid black;
-        min-width: 35%;
-        max-width: 35%;
-        height: 240px;
+        min-width: 45%;
+        max-width:45%;
     }
 }
 /*ipad potrait*/
 
 @media only screen and (min-width: 768px) {
     body {
-        color: white;
+        color: red;
+    }
+    .results {
+        min-width: 30%;
+        max-width: 30%;
     }
 }
 /*ipad lanscape / small laptop*/
 
 @media only screen and (min-width: 1024px) {
     body {
-        color: white;
+        color: green;
     }
     .results {
-        border: 1px solid black;
-        padding-left: 4px;
-        padding-right: 4px;
         min-width: 20%;
         max-width: 20%;
-        height: 240px;
     } 
 }
