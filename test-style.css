@@ -58,6 +58,11 @@ button {
     box-shadow: 0.1em 0.1em 0.5em #124;
   }
 
+  form {
+    background-image: url(website-images/transparent.jpg);
+  }
+  
+
   
   .container {
     min-height: 500px;
@@ -69,6 +74,7 @@ button {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    border-bottom: solid 4px  rgb(88,112,171);
   }
 
   section {
@@ -90,9 +96,19 @@ button {
     text-align: center;
 }
 
+.input-container {
+    background-image: url(website-images/transparent.jpg);
+    height: 200px;
+    width: 50%;
+    margin-left: 25%;
+}
+
 h1 {
-    font-size: 52px;
+    font-size: 40px;
     font-family: 'Carter One', cursive;
+    text-shadow: 2px 2px 2px black;
+    padding-top: 20px;
+    margin-bottom: 90px;
 }
 
 h2 {
@@ -118,7 +134,6 @@ h3 {
     margin-right: 25%;
     min-width: 90%;
     margin: auto;
-    border-radius: 5px;
     padding: 20px 20px;    
     width: 50%;
     text-align: center;
@@ -137,18 +152,20 @@ h3 {
 
 .results {
     border: 1px solid #FD7260;
+    border-radius: 1px;
     box-shadow: 5px 10px  rgb(88,112,171);
-    min-width: 60%;
-    max-width: 60%;
-    max-height: 240px;
-    padding: 20px;
+    min-width: 70%;
+    max-width: 70%;
+    max-height: 260px;
+    padding: 10px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 
 li {
-    border: 1px solid rgb(88,112,171);
+    border: 1px solid #FD7260;
+    border-radius: 1px;
     box-shadow: 5px 10px  rgb(88,112,171);
     list-style-type: none;
     background-color: #CACACA;
