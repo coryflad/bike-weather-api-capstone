@@ -84,15 +84,12 @@ function displayWeatherResults(responseJson) {
 
     // adds the weather results
     $('#weather-results').append(
-        `<li>
-        <ul>${responseJson.name}</ul>
-        <img src="https://openweathermap.org/img/w/${responseJson.weather[0].icon}.png">
-        <ul>${responseJson.weather[0].main}</ul>
-        <ul>Temperature:${responseJson.main.temp}&#8457</ul>
-        <ul>Feels Like:${responseJson.main.feels_like}&#8457</ul>
-        <ul>Wind Speed:${responseJson.wind.speed}MPH</ul>
-        <ul>Wind Direction:${degToCompass(responseJson.wind.deg)}</ul>
-        </li>`
+        `<li> <img src="https://openweathermap.org/img/w/${responseJson.weather[0].icon}.png">${responseJson.name}</li>
+        <li>${responseJson.weather[0].main}</li>
+        <li>Temperature:${responseJson.main.temp}&#8457</li>
+        <li>Feels Like:${responseJson.main.feels_like}&#8457</li>
+        <li>Wind:${responseJson.wind.speed}MPH</li>
+        <li>Wind Direction:${degToCompass(responseJson.wind.deg)}</li>`
     )
 
     // display the results section
@@ -118,7 +115,9 @@ function displayYoutubeResults(responseJson) {
         // and thumbnail
         $('#youtube-results').append(
             `<li class="results"><h3>${responseJson.items[i].snippet.title}</h3>
-        <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+            <a href='https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId} ' target='_blank'>
+            <img class="youtube-image" src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+            </a>
         </li>`
         )
         // display the results section
