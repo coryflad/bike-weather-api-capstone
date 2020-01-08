@@ -34,12 +34,12 @@ As a user, I want to see the current weather weather data and the three day fore
 
 **Landing Page** 
 
-![Landing Page Design]()
+![Landing Page Design](/github-images/landing-page-screenshot.png)
 
 
 **Insights Page** 
 
-![Insights Page Design]()
+![Insights Page Design](/github-images/insight-page-screenshot.png)
 
 
 

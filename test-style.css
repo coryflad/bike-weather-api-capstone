@@ -67,9 +67,7 @@ button {
     margin-bottom: 40px;
 
   }
-  
-
-  
+    
   .container {
     min-height: 500px;
     text-align: center;
@@ -83,6 +81,10 @@ button {
     border-bottom: solid 4px  r;
   }
 
+
+
+
+  
   section {
       margin-top: 20px;
       
@@ -99,9 +101,6 @@ button {
     max-width: 90%;
   }
 
-.container {
-    text-align: center;
-}
 
 .input-container {
     background-image: url(website-images/transparent.jpg);
@@ -177,7 +176,6 @@ p {
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-    background-color: #CACACA;
 }
 
 
@@ -205,7 +203,7 @@ p {
 
 
 .youtube-image {
-    width: 85%;
+    width: 100%;
 }
 
 
