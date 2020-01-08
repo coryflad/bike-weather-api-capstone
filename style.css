@@ -147,6 +147,20 @@ section {
   margin-top: 20px; 
 }
 
+#js-error-message {
+  width: 50%;
+  margin-left: 25%;
+  height: 80px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: 2px 1px #333;
+  background-color: #CACACA;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
 #weather-results-list {
   margin: 10px auto;
   border-radius: 5px;
