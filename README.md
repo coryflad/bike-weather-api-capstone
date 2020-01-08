@@ -1,6 +1,6 @@
 # bike-weather-api-capstone
 
-The bike weather app allows you to view the current weather data in order to plan for your bike route on that day. A 3 day future forecast will be provided to aid for future planning
+The bike weather app allows you to view the current weather data in order to aid in planning for your bike route. 
 
 
 ### Working Prototype
@@ -36,29 +36,12 @@ As a user, I want to see the current weather weather data and the three day fore
 
 ![Landing Page Design]()
 
-**Landing Page Mobile** 
-
-![Landing Page Mobile Design]()
 
 **Insights Page** 
 
 ![Insights Page Design]()
 
-**Insights Page Mobile** 
 
-![Insights Page Mobile Design]()
-
-
-
-## Screenshots: MVP
-
-![Landing Page]()
-![Insight Page]()
-
-  
-## Technical
-
-bike-weather-api-capstone was built with: 
 
 #### Front End
 
@@ -69,7 +52,7 @@ bike-weather-api-capstone was built with:
 
 
 ### Responsive
-This app is built to be responsive to smaller screen sizes using a float-grid css and media screen width breakpoint of 700px for smaller screen sizes
+This app is built to be responsive to smaller screen sizes 
 
 
 ## Development Road Map
@@ -77,4 +60,5 @@ Features for future iterations include:
 - add a feature for current weather
 - add a feature for 3-day forecast
 - implement route finder to find the best ride according in the wind/weather
+- replace the videos with locations for coffee stops
 

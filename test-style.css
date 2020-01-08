@@ -177,6 +177,7 @@ p {
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
+    background-color: #CACACA;
 }
 
 
@@ -204,7 +205,7 @@ p {
 
 
 .youtube-image {
-    width: 100%;
+    width: 85%;
 }
 
 
