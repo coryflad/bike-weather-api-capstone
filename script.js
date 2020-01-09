@@ -122,6 +122,7 @@ function displayYoutubeResults(responseJson) {
         )
         // display the results section
         $('#youtube-results-list').removeClass('hidden');
+        $('#contact-info').removeClass('hidden');
         $('#js-error-message').addClass('hidden');
         console.log('youtube results displayed');
     };

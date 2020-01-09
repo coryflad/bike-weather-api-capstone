@@ -6,14 +6,16 @@
     <title>bike weather API capstone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Carter+One|Lato:700|Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="container">
+    <header>
         <h1>Bike Weather API Capstone</h1>
+    </header>
 
+    <section class="container">
         <form>
             <p>Do you want to know if you need your Flandrian Best for Flemish weather?</p>
             <p>Would you like to see some videos about the area you are riding in?</p>
@@ -21,10 +23,9 @@
             <input type="text" name="search-term" placeholder="Enter a city" id="js-search-term" required>
             <button type="submit" value="Search">Search</button>
         </form>
+    </section>
 
-    </header>
-
-    <section class="hidden" id="js-error-message" >
+    <section class="hidden" id="js-error-message">
         <h2>Error container</h2>
     </section>
 
@@ -40,29 +41,29 @@
         </ul>
     </section>
 
-    <footer>
+    <footer class="hidden" id="contact-info">
         <h4>Contact Info</h4>
-            <ul class="contact">
-                <li class="contact-info">
-                    <a href="mailto:cjfladham@hotmail.com?subject=Hello" target="_blank" aria-label="Email Cory">
-                        <i class="fas fa-envelope" title="Email">
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/coryflad" target="blank" aria-label="View GitHub profile">
-                        <i class="fab fa-github" title="GitHub">
-                        </i>
-                    </a>
-                </li>
-                <li class="contact-info">
-                    <a href="https://www.linkedin.com/in/cory-fladhammer-a7a529114/" target="_blank"
-                        aria-label="View LinkedIn profile">
-                        <i class="fab fa-linkedin" title="LinkedIn">
-                        </i>
-                    </a>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <a href="mailto:cjfladham@hotmail.com?subject=Hello" target="_blank" aria-label="Email Cory">
+                    <i class="fas fa-envelope" title="Email">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/coryflad" target="blank" aria-label="View GitHub profile">
+                    <i class="fab fa-github" title="GitHub">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/cory-fladhammer-a7a529114/" target="_blank"
+                    aria-label="View LinkedIn profile">
+                    <i class="fab fa-linkedin" title="LinkedIn">
+                    </i>
+                </a>
+            </li>
+        </ul>
     </footer>
 
 
