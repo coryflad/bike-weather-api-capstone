@@ -4,9 +4,9 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+ /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
   box-sizing: border-box;
-  /*reset Chrome user agent styles*/
+ /*reset Chrome user agent styles*/
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
   -webkit-margin-start: 0px;
@@ -15,7 +15,7 @@
   -webkit-padding-after: 0px;
   -webkit-padding-start: 0px;
   -webkit-padding-end: 0px;
-  /*reset Firefox user agent styles*/
+ /*reset Firefox user agent styles*/
   -moz-margin-before: 0px;
   -moz-margin-after: 0px;
   -moz-margin-start: 0px;
@@ -24,7 +24,7 @@
   -moz-padding-after: 0px;
   -moz-padding-start: 0px;
   -moz-padding-end: 0px;
-  /*reset Internet Explorer user agent styles*/
+ /*reset Internet Explorer user agent styles*/
   -ms-margin-before: 0px;
   -ms-margin-after: 0px;
   -ms-margin-start: 0px;
@@ -33,7 +33,7 @@
   -ms-padding-after: 0px;
   -ms-padding-start: 0px;
   -ms-padding-end: 0px;
-  /*reset Opera user agent styles*/
+ /*reset Opera user agent styles*/
   -o-margin-before: 0px;
   -o-margin-after: 0px;
   -o-margin-start: 0px;
@@ -43,239 +43,230 @@
   -o-padding-start: 0px;
   -o-padding-end: 0px;
 }
-
-/* -------------------------------------
-General styles (General Module, wrapping around the modules below)
-(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
-*/
-
+/* ------------------------------------- General styles (General Module, wrapping around the modules below) (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li)) */
 html {
-background-color: #eeeeee;
+  background-color: #eeeeee;
 }
-
 h1 {
-color: white;
-text-align: center;  
-font-size: 24px;
-font-family: 'Carter One', cursive;
-text-shadow: 2px 2px 2px black;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Carter One', cursive;
+  text-shadow: 2px 2px 2px black;
 }
-
 h2 {
-font-family: 'Lato', sans-serif;
-text-align: center;
-margin-bottom: 20px;
-font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
-
 h3 {
-font-family: 'Lato', sans-serif;
-text-align: center;
-margin-bottom: 24px;
-font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 12px;
 }
-
 p, label {
-padding: 4px;
-font-family: 'Lato', sans-serif;
-letter-spacing: 0.1em;
-text-shadow: 2px 2px 2px black;
+  padding: 4px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 2px black;
 }
-
 div {
   background-color: #333;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  max-width: 500px;
+  width: 60%;
 }
-
-/* -------------------------------------
-Header styles (Main Module)
-(all the styles inside the < header > or < nav > tags)
-*/  
-
+/* ------------------------------------- Header styles (Main Module) (all the styles inside the < header > or < nav > tags) */
 header {
-background-color: #333;
-height: 50px;
+  background-color: #333;
+  height: 50px;
 }
-
-/* -------------------------------------
-Content styles (Main Module)
-(all the styles inside the < sections > or < aside > tags)
-*/
+/* ------------------------------------- Content styles (Main Module) (all the styles inside the < sections > or < aside > tags) */
 button {
-padding: 1em;
-margin-bottom: 10px;
-border: 0;
-font-size: 0.8em;
-color: white;
-border-radius: 0.5em;
-background-image: linear-gradient(to bottom, #57b, #148);
-box-shadow: 0.1em 0.1em 0.5em #124;
+  padding: 1em;
+  margin-bottom: 10px;
+  border: 0;
+  font-size: 0.8em;
+  color: white;
+  border-radius: 0.5em;
+  background-image: linear-gradient(to bottom, #57b, #148);
+  box-shadow: 0.1em 0.1em 0.5em #124;
 }
-
-
-
 .container {
-min-height: 500px;
-text-align: center;
-width: 100%;
-color: white;
-background-image: url(website-images/background_1.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-padding-top: 18%;
+  min-height: 500px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-image: url(website-images/background_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 18%;
 }
-
 input {
-padding: 1em;
-margin-top: 20px;
-margin-bottom: 20px;
-border: 0;
-font-size: 0.8em;
-border-radius: 0.5em;
-font-size: 12px;
-max-width: 90%;
+  padding: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  font-size: 0.8em;
+  border-radius: 0.5em;
+  font-size: 12px;
+  max-width: 90%;
 }
-
 .input-container {
-background-image: url(website-images/transparent.jpg);
-height: 200px;
-width: 90%;
-margin-left: 10%;
+  background-image: url(website-images/transparent.jpg);
+  height: 200px;
+  width: 90%;
+  margin-left: 10%;
 }
-
 #js-error-message {
-width: 50%;
-margin-left: 25%;
-height: 80px;
-border: 1px solid #333;
-border-radius: 10px;
-box-shadow: 2px 1px #333;
-background-color: #CACACA;
-font-family: 'Raleway', sans-serif;
-text-align: center;
-padding-top: 20px;
-
+  width: 50%;
+  margin-left: 25%;
+  height: 80px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 2px 1px #333;
+  background-color: #CACACA;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding-top: 20px;
 }
-
 #weather-results-list {
-margin: 10px auto;
-border-radius: 5px;
-padding: 20px 20px;    
-width: 70%;
-text-align: center;
-letter-spacing: 0.1em;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 20px 20px;
+  width: 70%;
+  text-align: center;
+  letter-spacing: 0.1em;
 }
-
 #youtube-results-list {
-margin-right: 25%;
-min-width: 90%;
-margin: auto;
-padding: 20px 20px;    
-width: 50%;
-text-align: center;
+  margin-right: 25%;
+  min-width: 90%;
+  margin: auto;
+  padding: 20px 20px;
+  width: 50%;
+  text-align: center;
 }
-
 .hidden {
-display: none;
+  display: none;
 }
-
 .videos {
-display: flex;
-list-style-type: none;
-flex-wrap: wrap;
-justify-content: space-evenly;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
 .results {
-border: 1px solid #333;
-border-radius: 10px;
-box-shadow: 2px 1px #333;
-min-width: 70%;
-max-width: 70%;
-max-height: 300px;
-padding: 10px;
-text-align: center;
-margin-bottom: 20px;
-background-color: #CACACA;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 2px 1px #333;
+  min-width: 70%;
+  max-width: 70%;
+  max-height: 300px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #CACACA;
 }
-
 #weather-results {
-border: 1px solid #333;
-border-radius: 10px;
-box-shadow: 2px 1px #333;
-list-style-type: none;
-background-color: #CACACA;
-font-family: 'Raleway', sans-serif;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 2px 1px #333;
+  list-style-type: none;
+  background-color: #CACACA;
+  font-family: 'Raleway', sans-serif;
 }
-
 #weather-results li {
-border-bottom: 1px solid #333;
-padding: 4px;
+  border-bottom: 1px solid #333;
+  padding: 4px;
 }
-
 #weather-results li:last-child {
-border-bottom: 0px;
+  border-bottom: 0px;
 }
 #weather-results li img {
-vertical-align: middle;
+  vertical-align: middle;
 }
-
 .youtube-image {
-width: 75%;
+  width: 75%;
 }
-
 footer {
   border-top: solid 1px black;
-  background-color: #CACACA
+  background-color: #CACACA 
 }
-
 .contact {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   font-size: 42px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*iPhone portrait*/
+@media only screen and (min-width: 320px) {
+  body {
+      color: purple;
+ } 
+ p, label {
+font-size: 12px;
+}
+label, button, input {
+  display: block;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
 /*iPhone landscape*/
-
-@media only screen and (max-width: 480px) {
-.results {
-    min-width: 45%;
-    max-width:45%;
+@media only screen and (min-width: 480px) {
+  body {
+      color: green;
+ }
+  .results {
+      min-width: 45%;
+      max-width:45%;
+ }
+ label, button, input {
+  display: inline-block;
+  width: auto;
+  margin: 0;
 }
 }
-/*ipad potrait*/
-
+/*Android landscape*/
+@media only screen and (min-width: 640px) {
+  body {
+      color: brown;
+ }
+}
+/*iPad potrait*/
 @media only screen and (min-width: 768px) {
-.results {
-    min-width: 30%;
-    max-width: 30%;
+  body {
+      color: red;
+ }
+  .results {
+      min-width: 30%;
+      max-width: 30%;
+ }
 }
-}
-/*ipad lanscape / small laptop*/
-
+/*iPad lanscape / small laptop*/
 @media only screen and (min-width: 1024px) {
-.results {
-    min-width: 20%;
-    max-width: 20%;
-} 
+  body {
+      color: blue;
+ }
+  .results {
+      min-width: 20%;
+      max-width: 20%;
+ }
+}
+/*large desktop*/
+@media only screen and (min-width: 1600px) {
+  body {
+      color: yellow;
+ }
 }
