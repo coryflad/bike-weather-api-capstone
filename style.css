@@ -75,7 +75,7 @@ margin-bottom: 24px;
 font-size: 12px;
 }
 
-p {
+p, label {
 padding: 4px;
 font-family: 'Lato', sans-serif;
 letter-spacing: 0.1em;
