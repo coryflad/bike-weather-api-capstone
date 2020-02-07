@@ -66,6 +66,8 @@ h3 {
   margin-bottom: 24px;
   font-size: 12px;
 }
+
+
 p, label {
   padding: 4px;
   font-family: 'Lato', sans-serif;
@@ -82,10 +84,19 @@ div {
   max-width: 500px;
   width: 60%;
 }
+
+a {
+  text-decoration: none;
+  color: black;  
+}
+
+a:hover {
+  color: whitesmoke;
+}
 /* ------------------------------------- Header styles (Main Module) (all the styles inside the < header > or < nav > tags) */
 header {
   background-color: #333;
-  height: 50px;
+  height: 60px;
 }
 /* ------------------------------------- Content styles (Main Module) (all the styles inside the < sections > or < aside > tags) */
 button {
@@ -208,9 +219,11 @@ footer {
 }
 /*iPhone portrait*/
 @media only screen and (min-width: 320px) {
-  body {
-      color: purple;
+body {
+      /* color: purple; */
  } 
+
+
  p, label {
 font-size: 12px;
 }
@@ -226,7 +239,11 @@ label, button, input {
 /*iPhone landscape*/
 @media only screen and (min-width: 480px) {
   body {
-      color: green;
+      /* color: green; */
+ }
+
+ h1 {
+   font-size: 32px;
  }
   .results {
       min-width: 45%;
@@ -241,13 +258,17 @@ label, button, input {
 /*Android landscape*/
 @media only screen and (min-width: 640px) {
   body {
-      color: brown;
+      /* color: brown; */
+ }
+
+ h1 {
+   font-size: 38px;
  }
 }
 /*iPad potrait*/
 @media only screen and (min-width: 768px) {
   body {
-      color: red;
+      /* color: red; */
  }
   .results {
       min-width: 30%;
@@ -257,7 +278,7 @@ label, button, input {
 /*iPad lanscape / small laptop*/
 @media only screen and (min-width: 1024px) {
   body {
-      color: blue;
+      /* color: blue; */
  }
   .results {
       min-width: 20%;
@@ -267,6 +288,6 @@ label, button, input {
 /*large desktop*/
 @media only screen and (min-width: 1600px) {
   body {
-      color: yellow;
+      /* color: yellow; */
  }
 }
